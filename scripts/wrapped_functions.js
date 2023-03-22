@@ -95,7 +95,7 @@ function creating_extra_functs() {
     })
     az.add_code("extra_functs_modal_content", 1, {
         "this_class": "azle_d3_code",
-        "code": 'barchart_extras = {<div>&nbsp; &nbsp; "text_color" : "az.all_style_d3("text", {"fill" : "white"})",</div><div>&nbsp; &nbsp; "text_size" : "az.all_style_d3("text", {"font-size" : "17px"})"</div><div>}</div>'
+        "code": 'barchart_extras = {<div>&nbsp; &nbsp; "text_color" : "az.all_style_d3("text", {"fill" : "grey"})",</div><div>&nbsp; &nbsp; "text_size" : "az.all_style_d3("text", {"font-size" : "17px"})"</div><div>}</div>'
     })
     az.style_code('azle_d3_code', 1, {
         "text-align": "left",
@@ -703,8 +703,8 @@ function setosa_only() {
     })
     az.call_d3_extra('scatter_chart', 1, {
         "extra_functions": scatter_extras,
-        "circle_color": "az.all_style_d3('dot', {'fill' : 'rgb(31, 119, 180)'})",
-        "legend": "az.style_d3('rect', 1, {'fill' : 'rgb(31, 119, 180)'})"
+        "circle_color": "az.all_style_d3('dot', {'fill' : 'rgb(165, 11, 81)'})",
+        "legend": "az.style_d3('rect', 1, {'fill' : 'rgb(165, 11, 81)'})"
     })
 }
 
@@ -716,8 +716,8 @@ function versicolor_only() {
     })
     az.call_d3_extra('scatter_chart', 1, {
         "extra_functions": scatter_extras,
-        "circle_color": "az.all_style_d3('dot', {'fill' : 'rgb(255, 127, 14)'})",
-        "legend": "az.style_d3('rect', 1, {'fill' : 'rgb(255, 127, 14)'})"
+        "circle_color": "az.all_style_d3('dot', {'fill' : 'rgb(1, 49, 96)'})",
+        "legend": "az.style_d3('rect', 1, {'fill' : 'rgb(1, 49, 96)'})"
     })
 }
 
@@ -729,8 +729,8 @@ function virginica_only() {
     })
     az.call_d3_extra('scatter_chart', 1, {
         "extra_functions": scatter_extras,
-        "circle_color": "az.all_style_d3('dot', {'fill' : 'rgb(44, 160, 44)'})",
-        "legend": "az.style_d3('rect', 1, {'fill' : 'rgb(44, 160, 44)'})"
+        "circle_color": "az.all_style_d3('dot', {'fill' : 'rgb(254, 115, 27)'})",
+        "legend": "az.style_d3('rect', 1, {'fill' : 'rgb(254, 115, 27)'})"
     })
 }
 
@@ -795,7 +795,7 @@ function play_timeline() {
     })
     az.animate_element('run_timeline_button', 1, {
         'type': 'spin',
-        'speed': 2000
+        'speed': 500
     })
     az.call_every({
         "every": 2000,
@@ -805,7 +805,7 @@ function play_timeline() {
                     "click_button" : "az.click_element('randomize', 1)"
                 })
                 az.all_style_layout('calendar_layout_cells', {'background' : 'transparent'})
-                az.style_layout('calendar_layout_cells', 13 + index, {'background' : 'hotpink'})
+                az.style_layout('calendar_layout_cells', 13 + index, {'background' : 'green'})
         `
     })
     az.delay_event({
@@ -991,7 +991,7 @@ function pop_api_modal() {
     })
     az.add_code("api_modal_content", 1, {
         "this_class": "azle_d3_code",
-        "code": "https://my-json-server.typicode.com/WorldofDataScience/azle_d3/db"
+        "code": "https://my-json-server.typicode.com/triciascully/azle_d3/db"
     })
     az.style_code('azle_d3_code', 1, {
         "text-align": "left",

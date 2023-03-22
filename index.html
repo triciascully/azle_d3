@@ -212,8 +212,8 @@ create_azle(function() {
     //     "shadow": "drop-shadow(0px 0px 8px rgb(250, 255, 245))"
     // })
     // ******* setting up layouts and styling that apply to all sections ********
-    section_titles = ['SIMPLE HISTOGRAM', 'CHANGING DATA', '2 CHARTS COMMUNICATING', 'PLAYING A TIMELINE', 'DELEGATING CLICK EVENTS', 'CLIENT-SIDE DATA']
-    section_explains = ['Average percentages of daily activities of Carrot Cake the cat (potentially accurate dummy data/estimations).', 'Dynamically passing new datasets to existing visuals.', '2 charts communicating with each other. Hover over bars on the left chart to change data on the right. See tutorial for code example.', 'Creating a series of visuals that play in succession.', 'Delegating click events to programmatically click elements inside a D3 visual.', 'Examples showing client-side data. In this case data are not saved as local files, but instead exist as JavaScript objects. There are 3 scenarios where it makes sense to use client-side data with D3; storing data as a JS object, fetching data from an API, and uploading data from the browser.']
+    section_titles = ['Simple Histogram', 'Change! That! Scatter Plot!', 'Sneaky, Sneaky Trends.', 'Daily Dilly-Dally', 'Zoom-A-Zoom-Zoom!', 'APIs & Fanciful Colors With Data Migrations']
+    section_explains = ['Daily activity breakdown for my cat Carrot Cake (estimated, although likely very accurate).', ' Using the infamous Iris dataset, we can look at scatter plots of different data. I did not change the underlying data due to lack of time, and also because Spring is almost here and looking at data about flowers is refreshing.', 'Sometimes a histogram just won\'t cut it. Sometimes things aren\'t quite what they seem. For example, E in this erroneous data that doesn\'t really seem to make sense is apparently rendering a 22% avg return even though it has what appears to be the most downward trending data when you look at the right timeseries plot. While this data is bogus and I would have replaced it had I more time, it still illustrates the point that two views of the same dataset is much more insightful than just one.', 'The data for this viz is all randomized, but for the sake of pure fun, I decided to create a scenario where I have a bunch of historical data broken down into categories of different ways that I dilly-dally over the course of a day, which can be investigated by day or played through over the course of a month.', 'These are a few fun ways to drill down into different data sets; complex hierarchical data, or simple mapped data. Again though, the underlying data was not changed from where I originally found this code, due to lack of time (and my admiration for seeing Data Science processes and methodologies broken down into a very clean and pretty tree).', 'This shows the relationship between variables in data that\'s been stored as JS objects across 3 different datasets, as well as one REST API call/data update, to show that I can work with different sources of data that come in various formats. Again, the underlying data was not changed from the original exercise/example that I found, but I did create the REST API in my own github repo to make sure I understood that part of the process.']
     az.call_multiple({
         "iterations": $('.sections').length,
         "function": `
@@ -247,7 +247,7 @@ create_azle(function() {
 	})
 	az.all_style_layout('sectional_layout', {
     	"height": "auto",
-    	"column_widths": ['15%', '85%'],
+    	"column_widths": ['20%', '80%'],
     	"border": 0
 	})
 
@@ -272,8 +272,8 @@ create_azle(function() {
         "text": section_explains[2]
     })
     // ******* adding all section 1 buttons and icons ********
-    button_titles = ["bar color", "text color", "text size", "bottom", "top", "left", "right", "fly away animation", "change data", "START OVER"]
-    call_wrapper_functions = ["bar_color()", "text_color()", "text_size()", "bottom()", "top_op()", "left()", "right()", "animate_zoomOutUp()", "update_data_full()", "start_over()"]
+     button_titles = ["bar color", "text color", "text size", "bottom", "top", "left", "right", "fly away animation", "change data", "START OVER"]
+     call_wrapper_functions = ["bar_color()", "text_color()", "text_size()", "bottom()", "top_op()", "left()", "right()", "animate_zoomOutUp()", "update_data_full()", "start_over()"]
     az.call_multiple({
         "iterations": button_titles.length,
         "function": `
@@ -331,7 +331,7 @@ create_azle(function() {
 	    //     "visibility" : "hidden"
 	    // })
 	    // }
-`
+// `
     })
     // ******* adding all section 2 buttons and icons ********
     button_titles_b = ["circle size", "circle opacity", "chart width"]
@@ -396,7 +396,7 @@ create_azle(function() {
         "this_class": "choose_data_check",
         "text_class": "choose_data_label",
         "name": "choose_data_section_6",
-        "text": "DATASET 1"
+        "text": "Dataset 1"
     })
     az.add_event('choose_data_check', 1, {
         "type": "click",
@@ -406,7 +406,7 @@ create_azle(function() {
         "this_class": "choose_data_check",
         "text_class": "choose_data_label",
         "name": "choose_data_section_6",
-        "text": "DATASET 2"
+        "text": "Dataset 2"
     })
     az.add_event('choose_data_check', 2, {
         "type": "click",
@@ -416,7 +416,7 @@ create_azle(function() {
         "this_class": "choose_data_check",
         "text_class": "choose_data_label",
         "name": "choose_data_section_6",
-        "text": "DATASET 3"
+        "text": "Dataset 3"
     })
     az.add_event('choose_data_check', 3, {
         "type": "click",
@@ -425,27 +425,27 @@ create_azle(function() {
     az.all_style_text('choose_data_label', {
         "color": "white"
     })
-    az.add_dropdown("options_layout_cells", 17, {
-        "this_class": "data_dropdown",
-        "options": ["Setosa", "Versicolor", "Virginica"],
-        "title": "choose class..."
-    })
-    az.style_dropdown('data_dropdown', 1, {
-        "width": "200px"
-    })
-    az.add_event('data_dropdown', 1, {
-        "type": "change",
-        "function": "choose_class(this.value)"
-    })
+    // az.add_dropdown("options_layout_cells", 17, {
+    //     "this_class": "data_dropdown",
+    //     "options": ["Setosa", "Versicolor", "Virginica"],
+    //     "title": "Pick a class!"
+    // })
+    // az.style_dropdown('data_dropdown', 1, {
+    //     "width": "200px"
+    // })
+    // az.add_event('data_dropdown', 1, {
+    //     "type": "change",
+    //     "function": "choose_class(this.value)"
+    // })
     // *************************Azle D3***********************************
     barchart_wrapper_args = {
         "data_path": "../data/bar_data.tsv",
-        "y_title": "AVG RETURN",
+        "y_title": "",
         "top_choice": 30,
         "right_choice": 30,
         "bottom_choice": 30,
         "left_choice": 60,
-        "bar_color": "rgb(48, 229, 255)",
+        "bar_color": "rgb(165, 11, 81)",
         "title_color": "grey",
         "chart_width": 950
     }
@@ -475,7 +475,7 @@ create_azle(function() {
         "text_color": "az.all_style_d3('text', {'fill' : 'grey'})",
         "text_size": "az.all_style_d3('text', {'font-size' : '17px'})",
         "circle_size": "az.all_style_d3('dot', {'r' : '7px'})",
-        "circle_opacity": "az.all_style_d3('dot', {'opacity' : 1})"
+        "circle_opacity": "az.all_style_d3('dot', {'opacity' : .6})"
     }
     az.add_d3_visual('sectional_layout_cells', 4, {
         "this_class": "scatter_chart",
@@ -519,7 +519,7 @@ create_azle(function() {
         "right_choice": 230,
         "bottom_choice": 30,
         "left_choice": 60,
-        "bar_color": "rgb(254, 225, 180)",
+        "bar_color": "rgb(134, 175, 21)",
         "title_color": "grey",
         "chart_width": 800
     }
@@ -566,7 +566,7 @@ create_azle(function() {
     })
     az.add_text('sectional_layout_cells', 7, {
         "this_class": "section_explain",
-        "text": "Run timeline or click on date to see corresponding data."
+        "text": "Run the timeline or click on a specific date to see how much I dilly-dally on the daily."
     })
     az.add_layout('sectional_layout_cells', 7, {
         "this_class": "cal_but_layout",
@@ -590,7 +590,7 @@ create_azle(function() {
     })
     az.style_button('run_timeline_button', 1, {
         "width": "190px",
-        "background": "rgb(17, 179, 232)",
+        "background": "rgb(4, 148, 203)",
         "margin-top": "10px",
         "margin-bottom": "10px"
     })
@@ -715,7 +715,7 @@ create_azle(function() {
     az.add_dropdown('options_layout_cells', 21, {
         "this_class": "option_drop",
         "options": ['analytics', 'cluster', 'graph', 'scale', 'controls', 'label', 'display'],
-        "title": "choose..."
+        "title": "Drill down!"
     })
     az.style_dropdown('option_drop', 1, {
         "margin-top": "80px",
@@ -749,7 +749,7 @@ create_azle(function() {
         az.add_dropdown('options_layout_cells', 24, {
             "this_class": "option_drop",
             "options": Object.keys(states_and_positions),
-            "title": "State"
+            "title": "Drill down! (the environmentally friendly way)"
         })
         az.style_dropdown('option_drop', 2, {
             "margin-top": "200px",
@@ -875,7 +875,7 @@ az.style_button('tree_option_buttons', 1, {
     })
     az.add_button('options_layout_cells', 34, {
         "this_class": "call_api_button",
-        "text": "FETCH DATA"
+        "text": "API CALL"
     })
     az.style_button('call_api_button', 1, {
         "background": "rgb(4, 148, 203)",
@@ -886,10 +886,10 @@ az.style_button('tree_option_buttons', 1, {
         "type": "click",
         "function": "pop_api_modal()"
     })
-    az.add_button('options_layout_cells', 36, {
-        "this_class": "upload_button",
-        "text": "UPLOAD DATA"
-    })
+    // az.add_button('options_layout_cells', 36, {
+    //     "this_class": "upload_button",
+    //     "text": "UPLOAD DATA"
+    // })
     az.style_button('upload_button', 1, {
         "background": "rgb(4, 148, 203)",
         "color": "white",
