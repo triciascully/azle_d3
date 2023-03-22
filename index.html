@@ -23,7 +23,7 @@ create_azle(function() {
     az.load_font("Ubuntu")
 
     az.style_body({
-        "background": "rgb(85, 85, 85)",
+        "background": "rgb(0, 57, 109)",
         "font-family": "Ubuntu",
         "min-width": "1300px",
         "max-width": "1300px",
@@ -35,24 +35,24 @@ create_azle(function() {
     })
     az.style_sections('my_nav', 1, {
         "background-color": "white",
-        "margin-bottom": "20px",
+        "margin-bottom": "auto",
         "height": "auto",
         "width" : "100%"
     })
-    az.add_top_button({
-        "this_class": "to_top_button",
-        "text": "TOP",
-        "side": "right"
-    })
-    az.style_button('to_top_button', 1, {
-        "background" : "rgb(254, 225, 180)",
-        "color" : "black",
-        "border" : "1px solid black"
-    })
-    az.add_event('to_top_button', 1, {
-        "type" : "click",
-        "function" : "az.animate_element('to_top_button', 1, {'type' : 'spin'})"
-    })
+    // az.add_top_button({
+    //     "this_class": "to_top_button",
+    //     "text": "TOP",
+    //     "side": "right"
+    // })
+    // az.style_button('to_top_button', 1, {
+    //     "background" : "rgb(254, 225, 180)",
+    //     "color" : "black",
+    //     "border" : "1px solid black"
+    // })
+    // az.add_event('to_top_button', 1, {
+    //     "type" : "click",
+    //     "function" : "az.animate_element('to_top_button', 1, {'type' : 'spin'})"
+    // })
     az.add_layout('my_nav', 1, {
         "this_class": "nav_layout",
         "cell_class": "nav_layout_cells",
@@ -70,150 +70,150 @@ create_azle(function() {
     })
     az.style_layout('nav_layout_cells', 2, {
         "halign": "center"
-    })
-    az.add_image('nav_layout_cells', 2, {
-        "this_class": "k_logo",
-        "image_path": "img/azle_d3.png"
-    })
-    az.style_image('k_logo', 1, {
-        "width": "300"
-    })
-    az.add_button('nav_layout_cells', 3, {
-        "this_class": "to_article_button",
-        "text": "TUTORIAL"
-    })
-    az.style_button('to_article_button', 1, {
-        "background": "rgb(254, 225, 180)",
-        "border": "1px solid black",
-        "float": "right",
-        "margin-right": "10px",
-        "margin-left": "10px",
-        "color": "black",
-        "outline" : 0
-    })
-    az.add_event('to_article_button', 1, {
-        "type" : "click",
-        "function" : "az.navigate_to('https://towardsdatascience.com/combining-d3-with-kedion-graduating-from-toy-visuals-to-real-applications-92bf7c3cc713', 'new_tab')"
-    })
-    az.add_image('nav_layout_cells', 3, {
-        "this_class": "octocat",
-        "image_path": "img/octocat.png"
-    })
-    az.style_image('octocat', 1, {
-        "width": "50px",
-        "float" : "right",
-        "cursor" : "pointer"
-    })
-    az.add_event('octocat', 1, {
-        "type" : "click",
-        "function" : "az.navigate_to('https://github.com/WorldofDataScience/azle_d3', 'new_tab')"
-    })
-    az.add_navigation_bar({
-        "this_class": "explain_nav"
-    })
-    az.style_navigation_bar('explain_nav', 1, {
-        "background-color": "transparent",
-        "border-radius": "4px",
-        "margin-bottom": "20px",
-        "height": "auto"
-    })
-    az.add_layout('explain_nav', 1, {
-        "this_class": "hold_explain_buttons",
-        "cell_class": "hold_explain_buttons_cells",
-        "row_class": "hold_explain_buttons_rows",
-        "number_of_rows": 1,
-        "number_of_columns": 4
-    })
-    az.style_layout('hold_explain_buttons', 1, {
-        "height": "auto",
-        "width": "auto",
-        "table-layout": "fixed",
-        "align": "center",
-        "border": 0
-    })
-    az.all_style_layout('hold_explain_buttons_cells', {
-        "halign": "center"
-    })
-    explain_buttons = ['ADDING D3 VISUALS', 'WRAPPER ARGUMENTS', 'EXTRA FUNCTIONS', 'BINDING D3 TO UI ELEMENTS']
+     })
+    // az.add_image('nav_layout_cells', 2, {
+    //     "this_class": "k_logo",
+    //     "image_path": "img/azle_d3.png"
+    // })
+    // az.style_image('k_logo', 1, {
+    //     "width": "300"
+    // })
+    // az.add_button('nav_layout_cells', 3, {
+    //     "this_class": "to_article_button",
+    //     "text": "TUTORIAL"
+    // })
+    // az.style_button('to_article_button', 1, {
+    //     "background": "rgb(254, 225, 180)",
+    //     "border": "1px solid black",
+    //     "float": "right",
+    //     "margin-right": "10px",
+    //     "margin-left": "10px",
+    //     "color": "black",
+    //     "outline" : 0
+    // })
+    // az.add_event('to_article_button', 1, {
+    //     "type" : "click",
+    //     "function" : "az.navigate_to('https://towardsdatascience.com/combining-d3-with-kedion-graduating-from-toy-visuals-to-real-applications-92bf7c3cc713', 'new_tab')"
+    // })
+    // az.add_image('nav_layout_cells', 3, {
+    //     "this_class": "octocat",
+    //     "image_path": "img/octocat.png"
+    // })
+    // az.style_image('octocat', 1, {
+    //     "width": "50px",
+    //     "float" : "right",
+    //     "cursor" : "pointer"
+    // })
+    // az.add_event('octocat', 1, {
+    //     "type" : "click",
+    //     "function" : "az.navigate_to('https://github.com/WorldofDataScience/azle_d3', 'new_tab')"
+    // })
+    // az.add_navigation_bar({
+    //     "this_class": "explain_nav"
+    // })
+    // az.style_navigation_bar('explain_nav', 1, {
+    //     "background-color": "transparent",
+    //     "border-radius": "4px",
+    //     "margin-bottom": "20px",
+    //     "height": "auto"
+    // })
+    // az.add_layout('explain_nav', 1, {
+    //     "this_class": "hold_explain_buttons",
+    //     "cell_class": "hold_explain_buttons_cells",
+    //     "row_class": "hold_explain_buttons_rows",
+    //     "number_of_rows": 1,
+    //     "number_of_columns": 4
+    // })
+    // az.style_layout('hold_explain_buttons', 1, {
+    //     "height": "auto",
+    //     "width": "auto",
+    //     "table-layout": "fixed",
+    //     "align": "center",
+    //     "border": 0
+    // })
+    // az.all_style_layout('hold_explain_buttons_cells', {
+    //     "halign": "center"
+    // })
+ //   explain_buttons = ['ADDING D3 VISUALS', 'WRAPPER ARGUMENTS', 'EXTRA FUNCTIONS', 'BINDING D3 TO UI ELEMENTS']
     explain_functs = ['adding_d3_visuals()', 'creating_wrapper_args()', 'creating_extra_functs()', 'bind_to_element()']
-    az.call_multiple({
-        "iterations": explain_buttons.length,
-        "function": `
-    az.add_button('hold_explain_buttons_cells', index + 1, {
-        "this_class" : "explain_button",
-        "text" : explain_buttons[index]
-    })
-    az.all_style_button('explain_button', {
-        "background" : "grey",
-        "margin-left" : "4px",
-        "margin-right" : "4px",
-        "outline" : 0
-    })
-    az.add_event('explain_button', index + 1, {
-        "type" : "click",
-        "function" : explain_functs[index]
-    })
-`
-    })
+//     az.call_multiple({
+//         "iterations": explain_buttons.length,
+//         "function": `
+//     az.add_button('hold_explain_buttons_cells', index + 1, {
+//         "this_class" : "explain_button",
+//         "text" : explain_buttons[index]
+//     })
+//     az.all_style_button('explain_button', {
+//         "background" : "grey",
+//         "margin-left" : "4px",
+//         "margin-right" : "4px",
+//         "outline" : 0
+//     })
+//     az.add_event('explain_button', index + 1, {
+//         "type" : "click",
+//         "function" : explain_functs[index]
+//     })
+// `
+//     })
     az.add_sections({
         "this_class": "sections",
         "sections": 6
     })
     az.all_style_sections('sections', {
-        "background": "rgba(91, 95, 100, 0.95)",
-        "width": "90%",
-        "height": "auto"
-    })
-    az.add_navigation_bar({
-        "this_class": "footer"
-    })
-    az.style_navigation_bar('footer', 1, {
-        "background": "rgba(91, 95, 100, 0.95)",
-        "height": "auto"
-    })
-    az.add_layout('footer', 1, {
-        "this_class": "footer_layout",
-        "cell_class": "footer_layout_cells",
-        "row_class": "footer_layout_rows",
-        "number_of_rows": 1,
-        "number_of_columns": 2
-    })
-    az.style_layout('footer_layout', 1, {
-        "height": "auto",
+        "background": "rgb(255, 255, 255)",
         "width": "auto",
-        "align": "center",
-        "border": 0
+        "height": "auto"
     })
-    az.add_text('footer_layout_cells', 1, {
-        "this_class": "footer_text",
-        "text": "Written in Azle and "
-    })
-    az.style_text('footer_text', 1, {
-        "color": "lightgrey"
-    })
-    az.style_word('footer_text', 1, {
-        "this_class" : "azle_text",
-        "word" : "Azle",
-        "color" : "#73BFAC",
-        "font-weight" : "bold",
-        "cursor" : "pointer"
-    })
-    az.add_event('azle_text', 1, {
-        "type" : "click",
-        "function" : "az.navigate_to('https://azlejs.com', 'new_tab')"
-    })
-    az.add_image('footer_layout_cells', 2, {
-        "this_class": "footer_logo",
-        "image_path": "img/d3.png"
-    })
-    az.style_image('footer_logo', 1, {
-        "width": "50px",
-        "float": "right",
-        "shadow": "drop-shadow(0px 0px 8px rgb(250, 255, 245))"
-    })
+    // az.add_navigation_bar({
+    //     "this_class": "footer"
+    // })
+    // az.style_navigation_bar('footer', 1, {
+    //     "background": "rgba(91, 95, 100, 0.95)",
+    //     "height": "auto"
+    // })
+    // az.add_layout('footer', 1, {
+    //     "this_class": "footer_layout",
+    //     "cell_class": "footer_layout_cells",
+    //     "row_class": "footer_layout_rows",
+    //     "number_of_rows": 1,
+    //     "number_of_columns": 2
+    // })
+    // az.style_layout('footer_layout', 1, {
+    //     "height": "auto",
+    //     "width": "auto",
+    //     "align": "center",
+    //     "border": 0
+    // })
+    // az.add_text('footer_layout_cells', 1, {
+    //     "this_class": "footer_text",
+    //     "text": "Written in Azle and "
+    // })
+    // az.style_text('footer_text', 1, {
+    //     "color": "lightgrey"
+    // })
+    // az.style_word('footer_text', 1, {
+    //     "this_class" : "azle_text",
+    //     "word" : "Azle",
+    //     "color" : "#73BFAC",
+    //     "font-weight" : "bold",
+    //     "cursor" : "pointer"
+    // })
+    // az.add_event('azle_text', 1, {
+    //     "type" : "click",
+    //     "function" : "az.navigate_to('https://azlejs.com', 'new_tab')"
+    // })
+    // az.add_image('footer_layout_cells', 2, {
+    //     "this_class": "footer_logo",
+    //     "image_path": "img/d3.png"
+    // })
+    // az.style_image('footer_logo', 1, {
+    //     "width": "50px",
+    //     "float": "right",
+    //     "shadow": "drop-shadow(0px 0px 8px rgb(250, 255, 245))"
+    // })
     // ******* setting up layouts and styling that apply to all sections ********
-    section_titles = ['STYLING & ANIMATION', 'CHANGING DATA', '2 CHARTS COMMUNICATING', 'PLAYING A TIMELINE', 'DELEGATING CLICK EVENTS', 'CLIENT-SIDE DATA']
-    section_explains = ['Styling charts and animating elements.', 'Dynamically passing new datasets to existing visuals.', '2 charts communicating with each other. Hover over bars on the left chart to change data on the right. See tutorial for code example.', 'Creating a series of visuals that play in succession.', 'Delegating click events to programmatically click elements inside a D3 visual.', 'Examples showing client-side data. In this case data are not saved as local files, but instead exist as JavaScript objects. There are 3 scenarios where it makes sense to use client-side data with D3; storing data as a JS object, fetching data from an API, and uploading data from the browser.']
+    section_titles = ['SIMPLE HISTOGRAM', 'CHANGING DATA', '2 CHARTS COMMUNICATING', 'PLAYING A TIMELINE', 'DELEGATING CLICK EVENTS', 'CLIENT-SIDE DATA']
+    section_explains = ['Average percentages of daily activities of Carrot Cake the cat (potentially accurate dummy data/estimations).', 'Dynamically passing new datasets to existing visuals.', '2 charts communicating with each other. Hover over bars on the left chart to change data on the right. See tutorial for code example.', 'Creating a series of visuals that play in succession.', 'Delegating click events to programmatically click elements inside a D3 visual.', 'Examples showing client-side data. In this case data are not saved as local files, but instead exist as JavaScript objects. There are 3 scenarios where it makes sense to use client-side data with D3; storing data as a JS object, fetching data from an API, and uploading data from the browser.']
     az.call_multiple({
         "iterations": $('.sections').length,
         "function": `
@@ -230,7 +230,7 @@ create_azle(function() {
     az.style_word('section_explain', 3, {
         "this_class" : "link_to_tut",
         "word" : "tutorial",
-        "color" : "yellow",
+        "color" : "navy",
         "cursor" : "pointer"
     })
     az.add_event('link_to_tut', 1, {
@@ -247,14 +247,14 @@ create_azle(function() {
 	})
 	az.all_style_layout('sectional_layout', {
     	"height": "auto",
-    	"column_widths": ['20%', '80%'],
+    	"column_widths": ['15%', '85%'],
     	"border": 0
 	})
 
-	az.add_text('sectional_layout_cells', (index*2) + 1, {
-	    "this_class" : "examples_title",
-	    "text" : "EXAMPLES"
-	})
+	// az.add_text('sectional_layout_cells', (index*2) + 1, {
+	//     "this_class" : "examples_title",
+	//     "text" : "EXAMPLES"
+	// })
 
 	az.add_layout('sectional_layout_cells', (index*2) + 1, {
     	"this_class": "options_layout",
@@ -282,55 +282,55 @@ create_azle(function() {
     	    "cell_class": "butt_and_code_layout_cells",
     	    "row_class": "butt_and_code_layout_rows",
     	    "number_of_rows": 1,
-    	    "number_of_columns": 2
+    	    "number_of_columns": 1
 	    })
 	    az.all_style_layout('butt_and_code_layout', {
     	    "height" : "auto",
     	    "width"  : "auto",
     	    "border" : 0
 	    })
-	    az.add_button('butt_and_code_layout_cells', (index*2) + 1, {
-	        'this_class'  : 'option_button',
-	        'text' : button_titles[index]
-	    })
-	    az.all_style_button('option_button', {
-	        "width" : "190px",
-	        "background" : "rgb(16, 168, 180)",
-	        "margin-bottom" : "4px"
-	    })
-	    az.add_event('option_button', index+1, {
-	        "type" : "click",
-	        "function" : call_wrapper_functions[index]
-	    })
-	    az.add_event('option_button', index+1, {
-	        "type" : "click",
-	        "function" : "az.all_style_button('option_button', {'outline' : 0}); az.style_button('option_button', az.get_target_instance(this.id), {'outline' : '2px solid yellow'})"
-	    })
+	    // az.add_button('butt_and_code_layout_cells', (index*2) + 1, {
+	    //     'this_class'  : 'option_button',
+	    //     'text' : button_titles[index]
+	    // })
+	    // az.all_style_button('option_button', {
+	    //     "width" : "190px",
+	    //     "background" : "rgb(4, 148, 203)",
+	    //     "margin-bottom" : "4px"
+	    // })
+	    // az.add_event('option_button', index+1, {
+	    //     "type" : "click",
+	    //     "function" : call_wrapper_functions[index]
+	    // })
+	    // az.add_event('option_button', index+1, {
+	    //     "type" : "click",
+	    //     "function" : "az.all_style_button('option_button', {'outline' : 0}); az.style_button('option_button', az.get_target_instance(this.id), {'outline' : '2px solid yellow'})"
+	    // })
 
-	    az.add_icon('butt_and_code_layout_cells', (index*2) + 2, {
-	        "this_class" : "code_icon",
-	        "icon_class" : "fa-file-code-o"
-	    })
-	    az.add_event('code_icon', az.last_class_instance('code_icon'), {
-	        "type" : "click",
-	        "function" : "pop_code_modal(this.id)"
-	    })
+	    // az.add_icon('butt_and_code_layout_cells', (index*2) + 2, {
+	    //     "this_class" : "code_icon",
+	    //     "icon_class" : "fa-file-code-o"
+	    // })
+	    // az.add_event('code_icon', az.last_class_instance('code_icon'), {
+	    //     "type" : "click",
+	    //     "function" : "pop_code_modal(this.id)"
+	    // })
 
-	    az.all_style_icon('code_icon', {
-	        "font-size" : "30px",
-	        "color" : "rgba(221, 173, 81, 0.92)",
-	        "padding" : "2px",
-	        "cursor" : "pointer"
-	    })
+	    // az.all_style_icon('code_icon', {
+	    //     "font-size" : "30px",
+	    //     "color" : "rgba(221, 173, 81, 0.92)",
+	    //     "padding" : "2px",
+	    //     "cursor" : "pointer"
+	    // })
 
-	    if(index == 9) {
-	    az.style_button('option_button', index+1, {
-	        "background" : "rgba(242, 155, 45, 0.97)"
-	    })
-	    az.style_icon('code_icon', index + 1, {
-	        "visibility" : "hidden"
-	    })
-	    }
+	    // if(index == 9) {
+	    // az.style_button('option_button', index+1, {
+	    //     "background" : "rgba(0, 57, 109, 0.97)"
+	    // })
+	    // az.style_icon('code_icon', index + 1, {
+	    //     "visibility" : "hidden"
+	    // })
+	    // }
 `
     })
     // ******* adding all section 2 buttons and icons ********
@@ -358,33 +358,33 @@ create_azle(function() {
 	        'this_class'  : 'option_button_b',
 	        'text' : button_titles_b[index]
 	    })
-	    az.style_button('option_button_b', index + 1, {
-	        "width" : "190px",
-	        "background" : "rgb(16, 168, 180)"
-	    })
-	    az.add_event('option_button_b', index+1, {
-	        "type" : "click",
-	        "function" : call_wrapper_functions_b[index]
-	    })
-	    az.add_event('option_button_b', new_index+1, {
-	        "type" : "click",
-	        "function" : "az.all_style_button('option_button', {'outline' : 0}); az.style_button('option_button', az.get_target_instance(this.id), {'outline' : '2px solid yellow'})"
-	    })
-	    az.add_icon('butt_and_code_layout_cells', (new_index*2) + 2, {
-	        "this_class" : "code_icon",
-	        "icon_class" : "fa-file-code-o"
-	    })
-	    az.add_event('code_icon', az.last_class_instance('code_icon'), {
-	        "type" : "click",
-	        "function" : "pop_code_modal(this.id)"
-	    })
+	    // az.style_button('option_button_b', index + 1, {
+	    //     "width" : "190px",
+	    //     "background" : "rgb(4, 148, 203)"
+	    // })
+	    // az.add_event('option_button_b', index+1, {
+	    //     "type" : "click",
+	    //     "function" : call_wrapper_functions_b[index]
+	    // })
+	    // az.add_event('option_button_b', new_index+1, {
+	    //     "type" : "click",
+	    //     "function" : "az.all_style_button('option_button', {'outline' : 0}); az.style_button('option_button', az.get_target_instance(this.id), {'outline' : '2px grey'})"
+	    // })
+	    // az.add_icon('butt_and_code_layout_cells', (new_index*2) + 2, {
+	    //     "this_class" : "code_icon",
+	    //     "icon_class" : "fa-file-code-o"
+	    // })
+	    // az.add_event('code_icon', az.last_class_instance('code_icon'), {
+	    //     "type" : "click",
+	    //     "function" : "pop_code_modal(this.id)"
+	    // })
 
-	    az.all_style_icon('code_icon', {
-	        "font-size" : "30px",
-	        "color" : "rgba(221, 173, 81, 0.92)",
-	        "padding" : "2px",
-	        "cursor" : "pointer"
-	    })
+	    // az.all_style_icon('code_icon', {
+	    //     "font-size" : "30px",
+	    //     "color" : "rgba(221, 173, 81, 0.92)",
+	    //     "padding" : "2px",
+	    //     "cursor" : "pointer"
+	    // })
 	    if(index == 10) {
 	    az.style_button('option_button_b', new_index+1, {
 	        "background" : "rgba(242, 155, 45, 0.97)"
@@ -446,11 +446,11 @@ create_azle(function() {
         "bottom_choice": 30,
         "left_choice": 60,
         "bar_color": "rgb(48, 229, 255)",
-        "title_color": "white",
+        "title_color": "grey",
         "chart_width": 950
     }
     barchart_extras = {
-        "text_color": "az.all_style_d3('text', {'fill' : 'white'})",
+        "text_color": "az.all_style_d3('text', {'fill' : 'grey'})",
         "text_size": "az.all_style_d3('text', {'font-size' : '17px'})"
     }
     az.add_d3_visual('sectional_layout_cells', 2, {
@@ -472,7 +472,7 @@ create_azle(function() {
         "chart_width": 930
     }
     scatter_extras = {
-        "text_color": "az.all_style_d3('text', {'fill' : 'white'})",
+        "text_color": "az.all_style_d3('text', {'fill' : 'grey'})",
         "text_size": "az.all_style_d3('text', {'font-size' : '17px'})",
         "circle_size": "az.all_style_d3('dot', {'r' : '7px'})",
         "circle_opacity": "az.all_style_d3('dot', {'opacity' : 1})"
@@ -520,12 +520,12 @@ create_azle(function() {
         "bottom_choice": 30,
         "left_choice": 60,
         "bar_color": "rgb(254, 225, 180)",
-        "title_color": "white",
+        "title_color": "grey",
         "chart_width": 800
     }
     barchart_2_extras = {
         "pointer_cursor": "az.all_style_d3('rect', {'cursor' : 'pointer'})",
-        "text_color": "az.all_style_d3('text', {'fill' : 'white'})",
+        "text_color": "az.all_style_d3('text', {'fill' : 'grey'})",
         "text_size": "az.all_style_d3('text', {'font-size' : '17px'})",
         "call_line_chart": "az.all_apply_id('bar'); az.all_add_event('bar', {'type' : 'hover', 'function' : 'parent.change_line_chart(az.get_target_instance(this.id))'})"
     }
@@ -539,11 +539,11 @@ create_azle(function() {
     linechart_wrapper_args = {
         "data_path": "../data/linechart_data_a.tsv",
         "chart_width": 400,
-        "line_color": "hotpink",
-        "text_color": "white"
+        "line_color": "orange",
+        "text_color": "grey"
     }
     linechart_extras = {
-        "text_color": "az.all_style_d3('text', {'fill' : 'white'})",
+        "text_color": "az.all_style_d3('text', {'fill' : 'grey'})",
         "text_size": "az.all_style_d3('text', {'font-size' : '17px'})"
     }
     az.add_d3_visual('dual_viz_layout_cells', 2, {
@@ -590,7 +590,7 @@ create_azle(function() {
     })
     az.style_button('run_timeline_button', 1, {
         "width": "190px",
-        "background": "rgb(16, 168, 180)",
+        "background": "rgb(17, 179, 232)",
         "margin-top": "10px",
         "margin-bottom": "10px"
     })
@@ -603,7 +603,7 @@ create_azle(function() {
         "text": "STOP"
     })
     az.style_button('stop_timeline_button', 1, {
-        "background": "rgba(179, 180, 153, 0.41)"
+        "background": "rgb(165, 11, 81)"
     })
     az.add_event('stop_timeline_button', 1, {
         "type": "click",
@@ -630,11 +630,11 @@ create_azle(function() {
         "border": 1
     })
     az.style_layout('calendar_layout_rows', 1, {
-        "background": "rgba(255, 156, 62, 0.64)"
+        "background": "rgb(253, 129, 8)"
     })
     az.all_add_event('calendar_layout_cells', {
         "type": "hover",
-        "function": "az.all_style_layout('calendar_layout_cells', {'background' : 'transparent', 'cursor' : 'pointer'}); az.style_layout('calendar_layout_cells', az.get_target_instance(this.id), {'background' : 'limegreen'})"
+        "function": "az.all_style_layout('calendar_layout_cells', {'background' : 'transparent', 'cursor' : 'pointer'}); az.style_layout('calendar_layout_cells', az.get_target_instance(this.id), {'background' : 'grey'})"
     })
     az.all_add_event('calendar_layout_cells', {
         "type": "click",
@@ -655,8 +655,8 @@ create_azle(function() {
     })
     piechart_wrapper_args = {}
     piechart_extras = {
-        "text_color": "az.all_style_d3('text', {'fill' : 'white'})",
-        "line_color": "az.all_style_d3('polyline', {'stroke' : 'rgb(39, 228, 255)'})",
+        "text_color": "az.all_style_d3('text', {'fill' : 'grey'})",
+        "line_color": "az.all_style_d3('polyline', {'stroke' : 'rgb(187, 191, 191)'})",
         "line_opacity": "az.all_style_d3('polyline', {'opacity' : 0.9})",
         "hide_button": "az.all_style_d3('button', {'visibility' : 'hidden'})"
     }
@@ -677,7 +677,7 @@ create_azle(function() {
         "border": 0
     })
     az.all_style_text('examples_title', {
-        "color": "whitesmoke",
+        "color": "grey",
         "align": "center",
         "padding": "10px",
         "font-size": "17px",
@@ -685,12 +685,12 @@ create_azle(function() {
         "margin-left": "4px",
         "margin-bottom": "-8px"
     })
-    az.all_style_icon('code_icon', {
-        "font-size": "30px",
-        "color": "rgba(221, 173, 81, 0.92)",
-        "padding": "2px",
-        "cursor": "pointer"
-    })
+    // az.all_style_icon('code_icon', {
+    //     "font-size": "30px",
+    //     "color": "rgba(221, 173, 81, 0.92)",
+    //     "padding": "2px",
+    //     "cursor": "pointer"
+    // })
     // **********************SECTION 5 **************************************
     az.remove_element('examples_title', 3)
     az.style_layout('sectional_layout_cells', 10, {
@@ -749,7 +749,7 @@ create_azle(function() {
         az.add_dropdown('options_layout_cells', 24, {
             "this_class": "option_drop",
             "options": Object.keys(states_and_positions),
-            "title": "choose..."
+            "title": "State"
         })
         az.style_dropdown('option_drop', 2, {
             "margin-top": "200px",
@@ -770,9 +770,9 @@ create_azle(function() {
         })
         az.all_style_button('zoom_option_buttons', {
             "width": "150px",
-            "background": "rgb(254, 225, 180)",
-            "border": "1px solid black",
-            "color": "black",
+            "background": "rgb(165, 11, 81)",
+            "border": "0px solid black",
+            "color": "white",
             "height": "40px",
             "margin-top": "10px",
             "margin-left": "2px"
@@ -871,15 +871,15 @@ az.style_button('tree_option_buttons', 1, {
         "function": "switch_client_side('data_choice_3')"
     })
     az.all_style_text('choose_data_label', {
-        "color": "white"
+        "color": "grey"
     })
     az.add_button('options_layout_cells', 34, {
         "this_class": "call_api_button",
         "text": "FETCH DATA"
     })
     az.style_button('call_api_button', 1, {
-        "background": "rgb(254, 225, 180)",
-        "color": "black",
+        "background": "rgb(4, 148, 203)",
+        "color": "white",
         "outline" : 0
     })
     az.add_event('call_api_button', 1, {
@@ -891,8 +891,8 @@ az.style_button('tree_option_buttons', 1, {
         "text": "UPLOAD DATA"
     })
     az.style_button('upload_button', 1, {
-        "background": "rgb(254, 225, 180)",
-        "color": "black",
+        "background": "rgb(4, 148, 203)",
+        "color": "white",
         "outline" : 0
     })
     az.add_event('upload_button', 1, {
@@ -918,42 +918,42 @@ az.style_button('tree_option_buttons', 1, {
 //    az.check_checkbox('choose_data_check', 4)
     // ***** all_styles
     az.all_style_text('section_explain', {
-        "color": "white",
+        "color": "grey",
         "font-size": "18px"
     })
     az.all_style_text('section_explain_title', {
-        "color": "rgb(245, 255, 169)",
+        "color": "rgb(4, 148, 203)",
         "font-size": "22px"
     })
     az.all_style_text('choose_flare', {
-        "color": "white",
+        "color": "grey",
         "font-size": "18px",
         "margin-left": "60px",
         "cursor": "pointer"
     })
     az.style_text('choose_flare', 1, {
-        "color": "hotpink"
+        "color": "orange"
     })
     az.all_style_button('call_api_button', {
-        "border": "1px solid black"
+        "border": "0px solid black"
     })
     az.all_style_button('upload_button', {
-        "border": "1px solid black"
+        "border": "0px solid black"
     })
     az.all_style_button('run_timeline_button', {
-        "border": "1px solid darkgrey"
+        "border": "0px solid darkgrey"
     })
     az.all_style_button('stop_timeline_button', {
-        "border": "1px solid darkgrey"
+        "border": "0px solid darkgrey"
     })
     az.all_style_button('option_button', {
         "border": "0px solid darkgrey"
     })
     az.all_style_button('tree_option_buttons', {
         "width": "60%",
-        "background": "rgb(254, 225, 180)",
-        "border": "1px solid black",
-        "color": "black",
+        "background": "rgb(4, 148, 203)",
+        "border": "0px solid black",
+        "color": "white",
         "height": "50px",
         "margin-top": "10px"
     })

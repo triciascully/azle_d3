@@ -59,7 +59,7 @@ function creating_wrapper_args() {
     })
     az.add_code("creating_wrapper_args_modal_content", 1, {
         "this_class": "azle_d3_code",
-        "code": 'barchart_wrapper_args = {<div>&nbsp; &nbsp; "data_path" : "../data/bar_data.tsv",</div><div>&nbsp; &nbsp; "y_title" : "AVG RETURN",</div><div>&nbsp; &nbsp; "top_choice" : 30,</div><div>&nbsp; &nbsp; "right_choice" : 30,</div><div>&nbsp; &nbsp; "bottom_choice" : 30,</div><div>&nbsp; &nbsp; "left_choice" : 60,</div><div>&nbsp; &nbsp; "bar_color" : "rgb(48, 229, 255)",</div><div>&nbsp; &nbsp; "title_color" : "white",</div><div>&nbsp; &nbsp; "chart_width" : 950</div><div>}</div>'
+        "code": 'barchart_wrapper_args = {<div>&nbsp; &nbsp; "data_path" : "../data/bar_data.tsv",</div><div>&nbsp; &nbsp; "y_title" : "",</div><div>&nbsp; &nbsp; "top_choice" : 30,</div><div>&nbsp; &nbsp; "right_choice" : 30,</div><div>&nbsp; &nbsp; "bottom_choice" : 30,</div><div>&nbsp; &nbsp; "left_choice" : 60,</div><div>&nbsp; &nbsp; "bar_color" : "rgb(165, 11, 81)",</div><div>&nbsp; &nbsp; "title_color" : "grey",</div><div>&nbsp; &nbsp; "chart_width" : 950</div><div>}</div>'
     })
     az.style_code('azle_d3_code', 1, {
         "text-align": "left",
@@ -496,17 +496,17 @@ function update_data_full() {
 function start_over() {
     barchart_wrapper_args = {
         "data_path": "../data/bar_data.tsv",
-        "y_title": "AVG RETURN",
+        "y_title": "",
         "top_choice": 30,
         "right_choice": 30,
         "bottom_choice": 30,
         "left_choice": 60,
-        "bar_color": "rgb(48, 229, 255)",
-        "title_color": "white",
+        "bar_color": "rgb(165, 11, 81)",
+        "title_color": "grey",
         "chart_width": 950
     }
     barchart_extras = {
-        "text_color": "az.all_style_d3('text', {'fill' : 'white'})",
+        "text_color": "az.all_style_d3('text', {'fill' : 'grey'})",
         "text_size": "az.all_style_d3('text', {'font-size' : '17px'})"
     }
     az.call_d3_wrapper('my_d3', 1, {
